@@ -28,6 +28,7 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Fill in the little questionnaire
 - Takes you into the Deploy Database
 
+
 #### Deploy Database Cluster
 - Select the free m0
 - Use the defaultname Cluster0
@@ -36,6 +37,7 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Keep Add sample dataset enabled
 - Provide AWS
 - Now create the deployment (button below/right)
+
 
 #### Configure the database cluster
 - There is an automatic user created.
@@ -54,16 +56,71 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Select Drivers
 - Select Python (3.12 or later is fine)
 - Copy the connect string: it Should look like this:
-- mongodb+srv://<username>:<password>@cluster0.faoasxh.mongodb. net/?retryWrites=true&w=majority
-- Replace the <username> and <password> with the user you created
+
+ ```
+  mongodb+srv://<userid>:<password>@cluster0.ozciyn7.mongodb.net/?retryWrites=true&w=majority
+ ```
+- Replace the &lt; and &gt; characters with the user and password you created (don't include the &lt; and &gt; characters)
 - Congratulations, you're all done and the mongodb database setup is completed
 
-#### Setup Atlas database
-- After the database Cluster is created and set up, we'll set up Atlas database:
+#### Setup and run the first example code (AWS) 
+
+```
+!pip install pymongo
+!pip install dataset
+```
+```
+import os
+os.environ['MONGODB_ATLAS_URI'] = <your atlas connection string>
+
+from pymongo import MongoClient
+import datasets
+from datasets import load_dataset
+from bson import json_util
+
+uri = os.environ.get('MONGODB_ATLAS_URI')
+client = MongoClient(uri)
+db_name = 'sample_mflix'
+collection_name = 'embedded_movies'
+
+embedded_movies_collection = client[db_name][collection_name]
+
+dataset = load_dataset("AIatMongoDB/embedded_movies")
+
+insert_data = []
+
+for movie in dataset['train']:
+    doc_movie = json_util.loads(json_util.dumps(movie))
+    insert_data.append(doc_movie)
+
+    if len(insert_data) == 1000:
+        embedded_movies_collection.insert_many(insert_data)
+        print("1000 records ingested")
+        insert_data = []
+
+if len(insert_data) > 0:
+    embedded_movies_collection.insert_many(insert_data)
+    insert_data = []
+
+print("Data Ingested")
+```
+See MDB_embedded_movies.ipynb 
+
+#### Browse the embedded_movies collection
+
+![Figure 0](/images/image0.png)
+
+Add a filter to see only one movie
+
+```
+{ "title": "Scarface" }
+```
+
+#### Setup another datasbase (Langchain Example)
+- set up Atlas database:
 - select Deployments > Database on the left side
-- go over to the Brose Collections tab
-- Select Add My Own Data
-- create database:
+- Select Browse Collections tab
+- Select Create Database button on the left
 - database langchain_db
 - collection_name test 
 
@@ -91,14 +148,11 @@ The purpose of this preparation sheet is to help participants get a lab environm
 ```
  
 Here’s what it should look like when you're done:
-
->>>Figure 1
->>>
 ![Figure 1](/images/image1.png)
+Figure 1
 
->>>##### For more details see:
->>>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/ ](url)
-
+>>##### For more details see:
+>>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/ ](url)
 
 ### 3) Using Amazon Sagemaker 
 From the AWS Console navigate the Amazon Sagemaker (note you can use the search bar.)
@@ -125,17 +179,12 @@ From the AWS Console navigate the Amazon Sagemaker (note you can use the search 
 
 (See Figure 4 for an example)
 
->>>Figure 2
-
 ![Figure 2](/images/image2.png)
-
->>>Figure 3
 
 ![Figure 3](/images/image3.png)
 
->>>Figure 4
->>>
 ![Figure 4](/images/image4.png)
+
 
 #### Create the Notebook
 - After the instance is running (inService) create the Python notebook. 
@@ -187,5 +236,3 @@ Create Bucket
 
 From the EC2 Instance…
 	aws s3 cp s3://large-blobs/void.tar.gz ~/void.tar.gz
-
-
