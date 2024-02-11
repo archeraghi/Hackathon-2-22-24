@@ -28,7 +28,6 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Fill in the little questionnaire
 - Takes you into the Deploy Database
 
-
 #### Deploy Database Cluster
 - Select the free m0
 - Use the defaultname Cluster0
@@ -37,7 +36,6 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Keep Add sample dataset enabled
 - Provide AWS
 - Now create the deployment (button below/right)
-
 
 #### Configure the database cluster
 - There is an automatic user created.
@@ -94,10 +92,13 @@ The purpose of this preparation sheet is to help participants get a lab environm
  
 Here’s what it should look like when you're done:
 
+>>>Figure 1
+>>>
 ![Figure 1](/images/image1.png)
 
-##### For more details see:
-[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/ ](url)
+>>>##### For more details see:
+>>>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/ ](url)
+
 
 ### 3) Using Amazon Sagemaker 
 From the AWS Console navigate the Amazon Sagemaker (note you can use the search bar.)
@@ -124,12 +125,17 @@ From the AWS Console navigate the Amazon Sagemaker (note you can use the search 
 
 (See Figure 4 for an example)
 
+>>>Figure 2
+
 ![Figure 2](/images/image2.png)
+
+>>>Figure 3
 
 ![Figure 3](/images/image3.png)
 
+>>>Figure 4
+>>>
 ![Figure 4](/images/image4.png)
-
 
 #### Create the Notebook
 - After the instance is running (inService) create the Python notebook. 
