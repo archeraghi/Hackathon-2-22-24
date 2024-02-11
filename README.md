@@ -202,7 +202,7 @@ Figure 4
 - After the instance is running (inService) create the Python notebook. 
 - Select the Open JupyterLabs action for the instance
 - Under Notebook select the conda_python3 box
-- Rename your notebook (e.g., MDB-example-1.ipynb)
+- Rename your notebook (e.g., MDB-example1-SM.ipynb)
 - Import the sample notebook provided with the workshop
 - Load the same note books for Colab
 - MDBLoad-SM.ipynb
