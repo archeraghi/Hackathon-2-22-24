@@ -104,7 +104,11 @@ if len(insert_data) > 0:
 
 print("Data Ingested")
 ```
-See MDB_embedded_movies.ipynb 
+>See Using **Using Amazon Sagemaker** from Google Colab - MDB_SM_embedded_movies.ipynb
+>
+>or
+>
+>See **Using Google Colab** from Amazon Sagemaker - MDB_GC_embedded_movies.ipynb 
 
 #### Browse the embedded_movies collection
 
@@ -198,7 +202,7 @@ From the AWS Console navigate the Amazon Sagemaker (note you can use the search 
 - Run your code. 
 
 
-### Using Google Colab 
+### 4) Using Google Colab 
 - Create a free account on Google Colab
 - Goto ( https://colab.research.google.com/ )
 - Load the same note books for Colab
