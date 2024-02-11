@@ -184,11 +184,13 @@ From the AWS Console navigate the Amazon Sagemaker (note you can use the search 
 (See Figure 4 for an example)
 
 ![Figure 2](/images/image2.png)
+Figure 2
 
 ![Figure 3](/images/image3.png)
+Figure 3
 
 ![Figure 4](/images/image4.png)
-
+Figure 4
 
 #### Create the Notebook
 - After the instance is running (inService) create the Python notebook. 
