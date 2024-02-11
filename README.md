@@ -65,6 +65,12 @@ The purpose of this preparation sheet is to help participants get a lab environm
 
 #### Setup and run the first example code (AWS) 
 
+In this example we are going to load a HuggingFace dataset provided by MongoDB.
+
+>>##### For more details see:
+>>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/](url)
+
+Code Example
 ```
 !pip install pymongo
 !pip install dataset
