@@ -187,7 +187,7 @@ Here’s what it should look like when you're done:
 Figure 1
 
 >>##### For more details see:
->>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/ ](url)
+>>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/](https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/)
 
 ### 5) Using Amazon Sagemaker 
 From the AWS Console navigate the Amazon Sagemaker (note you can use the search bar.)
@@ -211,7 +211,8 @@ From the AWS Console navigate the Amazon Sagemaker (note you can use the search 
 - Paste the repo
 - Create notebook
 
-[https://github.com/OperationalizingAI/Hackathon-2-22-24.git](url)
+Use this link to clone...
+[https://github.com/OperationalizingAI/Hackathon-2-22-24.git](https://github.com/OperationalizingAI/Hackathon-2-22-24.git)
 
 (See Figure 4 for an example)
 
