@@ -75,7 +75,7 @@ In this example we are going to load a HuggingFace dataset provided by MongoDB.
 
 #### Setup the Databse Collection 
 - select Database button on the left
-- select the Brose Collections tab
+- select the Browse Collections tab
 - select create databases
 - select add my own data
 	- Database sample_mflix
