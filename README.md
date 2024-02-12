@@ -8,9 +8,12 @@ The purpose of this preparation sheet is to help participants get a lab environm
 |:----------|
 | Signup for a free OpenAI account    |
 | Create a Free MongoDB Atlas Account |
+| Run the first example |
+| Setup another Atlas Vecctor Database (Langchain Example) |
 | Setup Amazon Sagemaker ebviornment id using AWS|
 | Setup Google Colab ebviornment id using GCP    |
-| Run the first example |
+| Setting S3 Buckets for large files (optional) |
+
 
 ### 1) Signup for a free OpenAI account
 - Create an OpenAI account
@@ -63,7 +66,7 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Replace the &lt; and &gt; characters with the user and password you created (don't include the &lt; and &gt; characters)
 - Congratulations, you're all done and the mongodb database setup is completed
 
-#### Setup and run the first example code (AWS) 
+### 3) Setup and run the first example code  
 
 In this example we are going to load a HuggingFace dataset provided by MongoDB.
 
@@ -110,11 +113,11 @@ if len(insert_data) > 0:
 
 print("Data Ingested")
 ```
->See Using **Using Amazon Sagemaker** from Google Colab - MDB_SM_embedded_movies.ipynb
+>See Using **Using Amazon Sagemaker** from Google Colab - MDB_embedded_movies.ipynb
 >
 >or
 >
->See **Using Google Colab** from Amazon Sagemaker - MDB_GC_embedded_movies.ipynb 
+>See **Using Google Colab** from Amazon Sagemaker - MDB_embedded_movies.ipynb 
 
 #### Browse the embedded_movies collection
 
@@ -126,7 +129,12 @@ Add a filter to see only one movie
 { "title": "Scarface" }
 ```
 
-#### Setup another datasbase (Langchain Example)
+### 4) Setup another Atlas Vecctor Datasb (Langchain Example)
+
+This example is based on the following code:
+
+[https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas ](url)
+
 - set up Atlas database:
 - select Deployments > Database on the left side
 - Select Browse Collections tab
@@ -164,11 +172,11 @@ Figure 1
 >>##### For more details see:
 >>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/ ](url)
 
-### 3) Using Amazon Sagemaker 
+### 5) Using Amazon Sagemaker 
 From the AWS Console navigate the Amazon Sagemaker (note you can use the search bar.)
 
 #### Setup a Notebook Instance
-- After the database Cluster is created and set up, we'll set up a Notebook Instance:
+- After the Atlas Vector Database (Cluster0) is created and set up, we'll set up a Notebook Instance:
 - select Notebook > Notebook Instances on the left side
 - Select the “Create notebook Instance” buttonin top right
 - In Notebook Instance Settings
@@ -202,27 +210,31 @@ Figure 4
 - After the instance is running (inService) create the Python notebook. 
 - Select the Open JupyterLabs action for the instance
 - Under Notebook select the conda_python3 box
-- Rename your notebook (e.g., MDB-example1-SM.ipynb)
+- Rename your notebook (e.g., MDB-example1.ipynb)
 - Import the sample notebook provided with the workshop
 - Load the same note books for Colab
-- MDBLoad-SM.ipynb
-- DBRetrieve-SM.ipynb
-- Run your code. 
+- For the Langchain Example
+-- MDBLoad-SM.ipynb 
+-- DBRetrieve-SM.ipynb
+- Run your code.
 
+>Note: The examples use a secrets manager. For Sagemaker we used Amazon Secrets Manager.
+> Setup the following:
+>> OPENAPI_API_KEY
+>> 
+>> MONGODB_ATLAS_CLUSTER_URI
+>
+> Alternatitvly you can setup your keys in the notebook "getpass" or some other tool. 
 
 ### 4) Using Google Colab 
 - Create a free account on Google Colab
 - Goto ( https://colab.research.google.com/ )
 - Load the same note books for Colab
-- MDBLoad-GC.ipynb
-- DBRetrieve-GC.ipynb
+-- MDBLoad-GC.ipynb
+-- DBRetrieve-GC.ipynb
 - Run your code. 
 
-### Jupyter Notebooks
-Example Code to load data in our database 
-https://colab.research.google.com/drive/18Qf2lZjV9FY6VdcDTDFdGk3NSNiAT2-3?usp=sharing
-Example Code to query our data using RAG(Retrieval Augmented Generation)
-https://colab.research.google.com/drive/10uYyKxYMgi1qkWSaq1WO8lA2X5SSPayw?usp =sharing
+### 5) Setting S3 Buckets for large files (optional) 
 
 Additional Notes for Processing Large Files
 Setup a shared S3 blob
@@ -246,5 +258,7 @@ Create Bucket
     ]
 }
 
-From the EC2 Instance…
+From the Notebook console opern the termial of the Instance…
+```
 	aws s3 cp s3://large-blobs/void.tar.gz ~/void.tar.gz
+```
