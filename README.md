@@ -129,7 +129,7 @@ Add a filter to see only one movie
 { "title": "Scarface" }
 ```
 
-### 4) Setup another Atlas Vecctor Datasb (Langchain Example)
+### 4) Setup another Atlas Vecctor Database (Langchain Example)
 
 This example is based on the following code:
 
