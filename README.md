@@ -71,7 +71,7 @@ The purpose of this preparation sheet is to help participants get a lab environm
 In this example we are going to load a HuggingFace dataset provided by MongoDB.
 
 >>##### For more details see:
->>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/](url)
+>>[https://huggingface.co/datasets/AIatMongoDB/embedded_movies](url)
 
 #### Setup the Databse Collection 
 - select Database button on the left
