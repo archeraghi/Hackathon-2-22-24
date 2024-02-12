@@ -191,7 +191,8 @@ From the AWS Console navigate the Amazon Sagemaker (note you can use the search 
 - Select Git repository from the left window
 - Select the Default repository arrow
 - Select Clone a public Git repository to this notebook instance only
-- Paste the repo 
+- Paste the repo
+- Create notebook
 
 [https://github.com/OperationalizingAI/Hackathon-2-22-24.git](url)
 
