@@ -22,7 +22,7 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Create a secret key, save and copy it.
 
 ### 2) Create a Free MongoDB Atlas Account
-- Register a new account at: [https://www.mongodb.com/cloud/atlas/register](url)
+- Register a new account at: [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register)
 
 #### Create an account
 - Select Product from top down menu
@@ -150,7 +150,7 @@ If you need to reload a collection.
 
 This example is based on the following code:
 
-[https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas ](url)
+[https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas](https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas)
 
 - set up Atlas database:
 - select Deployments > Database on the left side
