@@ -73,7 +73,15 @@ In this example we are going to load a HuggingFace dataset provided by MongoDB.
 >>##### For more details see:
 >>[https://www.mongodb.com/docs/atlas/atlas-vector-search/create-index/](url)
 
-Code Example
+#### Setup the Databse Collection 
+- select Database button on the left
+- select the Brose Collections tab
+- select create databases
+- select add my own data
+	- Database sample_mflix
+ 	- Collection embedded_movies
+
+Code example for loading the collection
 ```
 !pip install pymongo
 !pip install dataset
@@ -128,6 +136,14 @@ Add a filter to see only one movie
 ```
 { "title": "Scarface" }
 ```
+#### Deleting a Collection (Optional)
+
+If you need to reload a collection.
+
+- Select Database
+- Select Brose Collections
+- In the left window highlight the collection name
+- Select the trash can icon and delete
 
 ### 4) Setup another Atlas Vecctor Database (Langchain Example)
 
