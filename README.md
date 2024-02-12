@@ -214,8 +214,8 @@ Figure 4
 - Import the sample notebook provided with the workshop
 - Load the same note books for Colab
 - For the Langchain Example
--- MDBLoad-SM.ipynb 
--- DBRetrieve-SM.ipynb
+	- MDBLoad-SM.ipynb
+	- MDBRetrieve-SM.ipynb
 - Run your code.
 
 >Note: The examples use a secrets manager. For Sagemaker we used Amazon Secrets Manager.
@@ -230,8 +230,8 @@ Figure 4
 - Create a free account on Google Colab
 - Goto ( https://colab.research.google.com/ )
 - Load the same note books for Colab
--- MDBLoad-GC.ipynb
--- DBRetrieve-GC.ipynb
+	- MDBLoad-GC.ipynb
+	- MDBRetrieve-GC.ipynb
 - Run your code. 
 
 ### 5) Setting S3 Buckets for large files (optional) 
