@@ -245,7 +245,54 @@ Figure 4
 >> 
 >> MONGODB_ATLAS_CLUSTER_URI
 >
-> Alternatitvly you can setup your keys in the notebook "getpass" or some other tool. 
+> Alternatitvly you can setup your keys in the notebook "getpass" or some other tool.
+
+#### Using Anazon Secrets Manager
+- Add the following code to your notebook (if Google code exists remove it)
+
+```
+import json
+import boto3
+from botocore.exceptions import ClientError
+
+def get_secret():
+
+    secret_name = "hackathon"
+    region_name = "us-east-1"
+
+    # Create a Secrets Manager client
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        # For a list of exceptions thrown, see
+        # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+        raise e
+
+    secret = json.loads(get_secret_value_response['SecretString'])
+    print(secret)
+    return secret
+```
+```
+secret = get_secret()
+
+openai_api_key = secret["OPENAI_API_KEY"]
+os.environ['OPENAI_API_KEY'] = openai_api_key
+
+MONGODB_ATLAS_CLUSTER_URI = secret["MONGODB_ATLAS_CLUSTER_URI"]
+os.environ['MONGODB_ATLAS_CLUSTER_URI'] = MONGODB_ATLAS_CLUSTER_URI
+
+langsmith_api_key = secret["LANGSMITH_API_KEY"]
+os.environ['LANGSMITH_API_KEY'] = langsmith_api_key
+```
+
 
 ### 4) Using Google Colab 
 - Create a free account on Google Colab
