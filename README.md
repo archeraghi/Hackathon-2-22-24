@@ -249,7 +249,10 @@ Figure 4
 
 #### Using Amazon Secrets Manager
 - Setup your secrets in Amazon Secrets Manager
-- Add the following code to your notebook (if Google code exists replace it)
+- Remove all of the Google code from the norebook (installs and secrets management code)
+- Add the following code to your notebook
+- Note:
+- 	I had to comment out llama-cpp-python in requirements.txt (figure out later)
 
 ```
 import os
