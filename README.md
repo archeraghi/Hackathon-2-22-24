@@ -168,7 +168,7 @@ This example is based on the following code:
 - Click on “Create Search Index”
 - Select Atlas Vector Search (Json editor)
 - Select Database langchain_db and collection_name test 
-- IndexName index_name
+- IndexName vector_index
 - Use the following json to configure:					
 
 ```
