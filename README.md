@@ -83,7 +83,7 @@ In this example we are going to load a HuggingFace dataset provided by MongoDB.
  	- Collection embedded_movies
 
 Code example from the AIatMongoDB/embedded_movies (loading the collection)
-Use [Code]( MDB_embedded_movies.ipynb)
+Use [Code](MDB_embedded_movies.ipynb)
 ```
 !pip install pymongo
 !pip install dataset
