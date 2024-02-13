@@ -252,6 +252,7 @@ Figure 4
 - Add the following code to your notebook (if Google code exists replace it)
 
 ```
+import os
 import json
 import boto3
 from botocore.exceptions import ClientError
@@ -278,7 +279,7 @@ def get_secret():
         raise e
 
     secret = json.loads(get_secret_value_response['SecretString'])
-    print(secret)
+    #print(secret)
     return secret
 ```
 ```
