@@ -301,6 +301,7 @@ os.environ['LANGSMITH_API_KEY'] = langsmith_api_key
 - Load the same note books for Colab
 	- MDBLoad-GC.ipynb
 	- MDBRetrieve-GC.ipynb
+- Setup Google Secrets Manager (secrets)
 - Run your code. 
 
 ### 5) Setting S3 Buckets for large files (optional) 
