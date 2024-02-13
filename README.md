@@ -247,8 +247,9 @@ Figure 4
 >
 > Alternatitvly you can setup your keys in the notebook "getpass" or some other tool.
 
-#### Using Anazon Secrets Manager
-- Add the following code to your notebook (if Google code exists remove it)
+#### Using Amazon Secrets Manager
+- Setup your secrets in Amazon Secrets Manager
+- Add the following code to your notebook (if Google code exists replace it)
 
 ```
 import json
