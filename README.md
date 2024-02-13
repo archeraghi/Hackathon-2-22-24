@@ -82,7 +82,8 @@ In this example we are going to load a HuggingFace dataset provided by MongoDB.
 	- Database sample_mflix
  	- Collection embedded_movies
 
-Code example for loading the collection
+Code example from the AIatMongoDB/embedded_movies (loading the collection)
+Use [Code]( MDB_embedded_movies.ipynb)
 ```
 !pip install pymongo
 !pip install dataset
