@@ -314,7 +314,7 @@ We created a number of lab exerciese based on the work of Sujee Maniyam. He did 
 
 There also some great examples in Prakul Argarwal's reposotory here:
 
-[https://github.com/prakul/MongoDB-AI-Resources] (https://github.com/prakul/MongoDB-AI-Resources)
+[https://github.com/prakul/MongoDB-AI-Resources](https://github.com/prakul/MongoDB-AI-Resources)
 
 ### 8) Setting S3 Buckets for large files (optional) 
 
