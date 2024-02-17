@@ -299,7 +299,7 @@ os.environ['LANGSMITH_API_KEY'] = langsmith_api_key
 ```
 
 
-### 4) Using Google Colab 
+### 6) Using Google Colab 
 - Create a free account on Google Colab
 - Goto ( https://colab.research.google.com/ )
 - Load the same note books for Colab
@@ -308,12 +308,12 @@ os.environ['LANGSMITH_API_KEY'] = langsmith_api_key
 - Setup Google Secrets Manager (secrets)
 - Run your code.
 
-### 5) Optional Labs
+### 7) Optional Labs
 We created a number of lab exerciese based on the work of Sujee Maniyam. He did an amazong job researching and putting togeher a number of examples. However, they are all deisgned to run locally on your machhine. We have creat a number of his labs in theis repository under the directory "labs/" that work with Google Colab and Amazon's Sagemaker. The can find his orignal work here:
 
 [https://github.com/sujee/mongodb-atlas-vector-search](https://github.com/sujee/mongodb-atlas-vector-search)]
 
-### 6) Setting S3 Buckets for large files (optional) 
+### 8) Setting S3 Buckets for large files (optional) 
 
 - Additional Notes for Processing Large Files
 - Setup a shared S3 blob
