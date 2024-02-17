@@ -306,17 +306,23 @@ os.environ['LANGSMITH_API_KEY'] = langsmith_api_key
 	- MDBLoad-GC.ipynb
 	- MDBRetrieve-GC.ipynb
 - Setup Google Secrets Manager (secrets)
-- Run your code. 
+- Run your code.
 
-### 5) Setting S3 Buckets for large files (optional) 
+### 5) Optional Labs
+We created a number of lab exerciese based on the work of Sujee Maniyam. He did an amazong job researching and putting togeher a number of examples. However, they are all deisgned to run locally on your machhine. We have creat a number of his labs in theis repository under the directory "labs/" that work with Google Colab and Amazon's Sagemaker. The can find his orignal work here:
 
-Additional Notes for Processing Large Files
-Setup a shared S3 blob
-Bucket 
-Large-blobs
-Upload the file(s) 
-Uncheck - Block all public access
-Take all the default
+[https://github.com/sujee/mongodb-atlas-vector-search](https://github.com/sujee/mongodb-atlas-vector-search)]
+
+### 6) Setting S3 Buckets for large files (optional) 
+
+- Additional Notes for Processing Large Files
+- Setup a shared S3 blob
+- Bucket 
+- Large-blobs
+- Upload the file(s) 
+- Uncheck - Block all public access
+- Take all the default
+```
 Create Bucket
 	Configure Bucket policy
 {
@@ -331,6 +337,7 @@ Create Bucket
         }
     ]
 }
+```
 
 From the Notebook console opern the termial of the Instance…
 ```
