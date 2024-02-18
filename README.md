@@ -13,7 +13,8 @@ The purpose of this preparation sheet is to help participants get a lab environm
 | Run the first example |
 | Setup another Atlas Vecctor Database (Langchain Example) |
 | Setup Amazon Sagemaker ebviornment id using AWS|
-| Setup Google Colab ebviornment id using GCP    |
+| Setup Google Colab enviornment id using GCP  
+| Optional Labs |
 | Setting S3 Buckets for large files (optional) |
 
 
