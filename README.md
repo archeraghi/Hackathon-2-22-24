@@ -1,4 +1,6 @@
-## GenAI Hackathon Preparation Sheet Overview
+## DevOps for GenAI Hackathon SF by MongoDB
+[https://lu.ma/DevOps-for-GenAI-SF](https://lu.ma/DevOps-for-GenAI-SF)
+
 
 The purpose of this preparation sheet is to help participants get a lab environment set up and running before the event. We have provided some sample Python code that we can use as a template for some of the projects we'll be running in the hackathon. In addition to Llama 2, Bedrock, and others, we will try to provide alternative stacks at the event. Currently, the default starter stack consists of GPT3.5-turbo, Langchain, and MongoDB Atlas Vector Search.
 
