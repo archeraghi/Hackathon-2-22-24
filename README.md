@@ -313,11 +313,11 @@ os.environ['LANGSMITH_API_KEY'] = langsmith_api_key
 - Run your code.
 
 ### 7) Optional Labs
-We created a number of lab exerciese based on the work of Sujee Maniyam. He did an amazong job researching and putting togeher a number of examples. However, they are all deisgned to run locally on your machhine. We have creat a number of his labs in theis repository under the directory "labs/" that work with Google Colab and Amazon's Sagemaker. The can find his orignal work here:
+We created a number of lab exerciese based on the work of Sujee Maniyam. He did an amazong job researching and putting togeher a number of examples. However, they are all deisgned to run locally on your machhine. We have created a number of his labs in this repository under the directory "labs/" that work with Google Colab and Amazon's Sagemaker. You can find his orignal work here:
 
 [https://github.com/sujee/mongodb-atlas-vector-search](https://github.com/sujee/mongodb-atlas-vector-search)]
 
-There also some great examples in Prakul Argarwal's reposotory here:
+There also some great examples in Prakul Argarwal's (from MongoDB) reposotory here:
 
 [https://github.com/prakul/MongoDB-AI-Resources](https://github.com/prakul/MongoDB-AI-Resources)
 
