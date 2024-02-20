@@ -321,6 +321,20 @@ There also some great examples in Prakul Argarwal's (from MongoDB) reposotory he
 
 [https://github.com/prakul/MongoDB-AI-Resources](https://github.com/prakul/MongoDB-AI-Resources)
 
+Here's a list of the labs:
+
+- lab1 - Connects to the client connection to the Atlas database. Assumes the sample_mflix databse exists.
+- Lab1-2 - Simple program to generate images using OpenAI Dall-e-3. 
+- Lab2-1 - Simple OpenAI client connection test.
+- Lab2-2 - Run simple quries against the sample_mflux (Netflix Movies) dataset. Setup a vector search index to quest embeddings.
+- Lab2-3 - Run cosine similarity against chunked PDF files. 
+- Lab2-4 - Query embeddings from text-embedding-ada-002 to use to search Atlas vector database. the langchain_dbmust exists already.
+- Lab3-1 - Querying with different embedding models.
+- Lab3-2 - Adding multiple embeddings to a collection.
+- Lab3-3 - Compare performance of different embeddings.
+- Lab4-1 - Load Uber and Lyft 10k PDFs into Atlas Vectore Search.
+
+
 ### 8) Setting S3 Buckets for large files (optional) 
 
 - Additional Notes for Processing Large Files
