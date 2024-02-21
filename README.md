@@ -39,8 +39,8 @@ The purpose of this preparation sheet is to help participants get a lab environm
 - Select the free m0
 - Use the defaultname Cluster0
 - Default to N.Virginia (US-East-1) 
-- Keep Automate security setup enabled
-- Keep Add sample dataset enabled
+- (if the option is available:) Keep Automate security setup enabled   
+- (if the option is available:) Keep Add sample dataset enabled
 - Provide AWS
 - Now create the deployment (button below/right)
 
@@ -48,7 +48,7 @@ The purpose of this preparation sheet is to help participants get a lab environm
 #### Configure the database cluster
 - There is an automatic user created.
 - (if copy and paste doesn't work, consider reloading the page)
-- Fill out user and password & create the user
+- Either use, copy and past the existing user and password or change user and password & create the user
 - Change the IP address that have access: (by clicking IP Access List)
 - by default it will fill in your current IP address
 - but for the hackathon we don't exactly what that IP will be
@@ -66,12 +66,13 @@ The purpose of this preparation sheet is to help participants get a lab environm
  ```
   mongodb+srv://<userid>:<password>@cluster0.ozciyn7.mongodb.net/?retryWrites=true&w=majority
  ```
-- Replace the &lt; and &gt; characters with the user and password you created (don't include the &lt; and &gt; characters)
+- Replace the &lt;userid&gt; and &lt;password&gt; with the user and password you created (!!! without &lt; and &gt; !!!)
 - Congratulations, you're all done and the mongodb database setup is completed
 
 ### 3) Setup and run the first example code  
 
-In this example we are going to load a HuggingFace dataset provided by MongoDB.
+In this example we are going to load a HuggingFace dataset provided by MongoDB. 
+
 
 >>##### For more details see:
 >> [https://huggingface.co/datasets/AIatMongoDB/embedded_movies](https://huggingface.co/datasets/AIatMongoDB/embedded_movies)
@@ -89,6 +90,9 @@ Note: this same code can be used to load another MongoDB supplied HF dataset cal
 
 Code example from the AIatMongoDB/embedded_movies (loading the collection)
 Use [MDB_embedded_datasets.ipynb](MDB_emedded_datasets.ipynb) 
+
+
+### You also can run this code as well
 
 ```
 !pip install pymongo
